@@ -1,0 +1,7 @@
+ftp://data.modencode.org/all_files/dmel-interpreted-1/21_BEAF-32_1fdr.gff.gz
+ftp://data.modencode.org/all_files/dmel-interpreted-1/921_repset.4620429.smoothedM.clusters.gff3.gz
+ftp://data.modencode.org/all_files/dmel-interpreted-1/5130_repset.17401623.smoothedM.clusters.gff3.gz
+ftp://data.modencode.org/all_files/dmel-interpreted-1/274_repset.4620885.smoothedM.clusters.gff3.gz
+ftp://data.modencode.org/all_files/dmel-interpreted-1/922_repset.4620888.smoothedM.clusters.gff3.gz
+ftp://data.modencode.org/all_files/dmel-interpreted-1/3745_repset.15664087.smoothedM.clusters.gff3.gz
+ftp://data.modencode.org/all_files/dmel-interpreted-1/3954_repset.17400048.enrichment.clusters.gff3.gz
