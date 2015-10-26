@@ -17,5 +17,5 @@ python ../scripts/mid_finder.py *.bed
 #
 echo Creating figure...
 cd ..
-python beaf_figure.py data/*.bed.mid
+python scripts/beaf_figure.py data/*.bed.mid
 
