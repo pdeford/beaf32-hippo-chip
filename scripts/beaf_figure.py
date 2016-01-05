@@ -74,9 +74,9 @@ for g_name in sys.argv[1:]:
                                     elif (((f_strt-1000) >= g_strt) and ((f_strt-1000) < g_end)) or \
                                         (((f_end+1000) >= g_strt) and ((f_end+1000) < g_end)) or \
                                         ((g_strt >= (f_strt-1000)) and (g_strt < (f_end+1000))):
-                                        peaks[geneName].append(g_strt)
+                                        peaks[geneName].append((g_strt, float(g_val)))
                                         peaks_n[geneName].append(g_name)
-                                        print "\t".join([f_chr, str(f_strt), str(f_end), geneName, g_val])
+                                        print "\t".join([f_chr, str(f_strt), str(f_end), geneName, g_val, str(g_strt), fields1[5]])
                                         #break
 
                         data.append([geneName, f_chr, f_strt, f_end, f_chr, fields1[5] ])
@@ -177,8 +177,11 @@ for i, name in enumerate(orderedNames):
             for r in ranges[:-1]:
                 rcounts[r] = 0
             
-            for kk, peak in enumerate(peaks[name]):
-                plt.plot(peak,0,'d',ms=15,mfc='red', alpha=0.8, zorder=11)
+            for kk, (peak, score) in enumerate(peaks[name]):
+                if score < 2.5:
+                    plt.plot(peak,0,'d',ms=15,mfc='none', alpha=0.8, zorder=11)
+                else:
+                    plt.plot(peak,0,'d',ms=15,mfc='red', alpha=0.8, zorder=11)
                 if rstart <= peak <= rend:
                     if peaks_n[name][kk] not in reg:
                         reg.append(peaks_n[name][kk])
